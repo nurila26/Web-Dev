@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>checkAge if-else</title>
+</head>
+<body>
+
+<script>
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Did parents allow you?');
+  }
+}
+let age = prompt("Enter your age:", 18);
+alert(checkAge(age));
+</script>
+
+</body>
+</html>

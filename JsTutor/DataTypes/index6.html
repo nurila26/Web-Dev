@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON Example</title>
+</head>
+<body>
+  <script>
+    let user = {
+      name: "John Smith",
+      age: 35
+    };
+
+    let json = JSON.stringify(user);
+    alert(json); 
+
+   
+    let user2 = JSON.parse(json);
+    alert(user2.name); 
+    alert(user2.age);  
+  </script>
+</body>
+</html>

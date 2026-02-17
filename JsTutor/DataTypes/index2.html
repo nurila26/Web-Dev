@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Messages Read Dates</title>
+</head>
+<body>
+  <script>
+    
+    let messages = [
+      {text: "Hello", from: "John"},
+      {text: "How goes?", from: "John"},
+      {text: "See you soon", from: "Alice"}
+    ];
+
+    let readMap = new WeakMap();
+
+    readMap.set(messages[0], new Date(2026, 1, 16)); 
+    readMap.set(messages[1], new Date(2026, 1, 15));
+
+    alert("Message 0 read at: " + readMap.get(messages[0])); 
+    alert("Message 1 read at: " + readMap.get(messages[1]));
+
+    messages.shift(); 
+
+    console.log("After shift, WeakMap has first message? " + readMap.has(messages[0]));
+  </script>
+</body>
+</html>
